@@ -61,7 +61,7 @@
   <div class="jumbotron">
     <div class="jumbotext">
       <h1>The most excellent Button Board</h1>
-      <p>Mange knapper. Noen funker, noen funker ikke. Noen ser ut som de funker mens de egentlig ikke funker, mens noen ser ut til å ikke funke mens de faktisk funker. </p>
+      <p>Mange knapper. Noen funker, noen funker ikke. Noen ser ut som de funker mens de egentlig ikke funker, mens noen virker som de ikke funker mens de faktisk funker. Hva tror du? </p>
 
     </div>
      </div>
@@ -70,7 +70,7 @@
     <div class="col-xs-12">
       <div class="panel panel-default">
         <div class="panel-body">
-          <button type="button" class="btn btn-large btn-primary">Skriv "Hello tester!" til consolet</button>
+          <button type="button" class="btn btn-large btn-primary" data-bind="click:sayHello">Skriv "Hello tester!" til consolet</button>
         </div>
       </div>
 
@@ -96,5 +96,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/knockout-3.3.0.js"></script>
+<script src="/app/ButtonBoardApp.js"></script>
 </body>
 </html>
