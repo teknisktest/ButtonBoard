@@ -1,12 +1,9 @@
-package boot;
+package com.soprasteria.boot;
 
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.*;
 
 @Configuration
 @EnableAutoConfiguration

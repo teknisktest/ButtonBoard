@@ -3,7 +3,7 @@ package enhetstest;
 
 import org.junit.Test;
 import org.junit.Assert;
-import boot.BootUp;
+import com.soprasteria.boot.BootUp;
 
 public class TekniskTestUnitTest {
 	

@@ -1,4 +1,4 @@
-package domain;
+package com.soprasteria.boot.domain;
 
 public class Konsulent {
 	private String navn; 

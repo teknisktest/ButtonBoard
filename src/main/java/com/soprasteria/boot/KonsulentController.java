@@ -1,8 +1,8 @@
-package controller;
+package com.soprasteria.boot;
 
 import java.util.List;
 
-import domain.Konsulent;
+import com.soprasteria.boot.domain.Konsulent;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import service.KonsulentService;
+import com.soprasteria.boot.service.KonsulentService;
 
 
 @Controller
-@RequestMapping(value="/role")
+@RequestMapping(value="/konsulent")
 public class KonsulentController {
 	
 	@Autowired

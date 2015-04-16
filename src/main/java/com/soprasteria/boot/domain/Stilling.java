@@ -1,4 +1,4 @@
-package domain;
+package com.soprasteria.boot.domain;
 
 public enum Stilling {
 	SOFTWARE_DEVELOPER (),

@@ -1,4 +1,4 @@
-package domain;
+package com.soprasteria.boot.domain;
 
 import java.util.List;
 
