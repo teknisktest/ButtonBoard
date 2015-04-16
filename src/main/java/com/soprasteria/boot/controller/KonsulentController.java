@@ -1,5 +1,6 @@
 package com.soprasteria.boot.controller;
 
+import java.net.MalformedURLException;
 import java.util.List;
 
 import com.soprasteria.boot.domain.Konsulent;
@@ -13,6 +14,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.soprasteria.boot.service.KonsulentService;
 
+import javax.servlet.ServletContext;
+
 
 @Controller
 @RequestMapping(value="/konsulent")
@@ -20,7 +23,11 @@ public class KonsulentController {
 	
 	@Autowired
 	KonsulentService service;
-	
+
+	@Autowired
+	ServletContext context;
+
+
 	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
 	public List<Konsulent> findAll() {
