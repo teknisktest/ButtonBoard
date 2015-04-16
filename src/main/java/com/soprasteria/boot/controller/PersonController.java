@@ -1,4 +1,4 @@
-package com.soprasteria.boot;
+package com.soprasteria.boot.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
