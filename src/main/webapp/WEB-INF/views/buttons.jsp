@@ -96,6 +96,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/knockout-3.3.0.js"></script>
+<script src="/app/Konsulent.js"></script>
+<script src="/app/Prosjekt.js"></script>
 <script src="/app/ButtonBoardApp.js"></script>
 </body>
 </html>
