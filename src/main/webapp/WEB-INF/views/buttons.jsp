@@ -76,7 +76,12 @@
 
       <div class="panel panel-default">
         <div class="panel-body">
-          <button type="button" class="btn btn-large btn-primary">Hent en liste med konsulentnavn fra server og vis de fram</button>
+          <button type="button" class="btn btn-large btn-primary" data-bind="click:btn2_hentKonsulenter">Hent en liste med konsulentnavn fra server og vis de fram</button>
+
+          <div data-bind="foreach:btn2_konsulenter">
+            <span data-bind="text: $data.navn"></span>
+          </div>
+
         </div>
       </div>
 
