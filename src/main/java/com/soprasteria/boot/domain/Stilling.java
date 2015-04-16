@@ -6,6 +6,7 @@ public enum Stilling {
 	TEST_MANAGER (), 
 	TESTER (), 
 	TECHNICAL_TESTER (), 
-	PROJECT_MANAGER (), 
+	PROJECT_MANAGER (),
+	TECHNICAL_AUTHOR ()
 
 }

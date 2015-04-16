@@ -1,7 +1,8 @@
 package com.soprasteria.boot.service;
 
-import java.util.ArrayList;
 import java.util.List;
+
+import com.soprasteria.boot.util.GenerateKonsulentData;
 
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.stereotype.Service;
@@ -14,12 +15,14 @@ import com.soprasteria.boot.domain.Konsulent;
 @Service
 @Configurable
 public class KonsulentService {
+
 	
 	private List<Konsulent> konsulenter; 
 	
 	public KonsulentService() {
 
-		konsulenter = new ArrayList<Konsulent>();
+		GenerateKonsulentData gkd = new GenerateKonsulentData();
+		konsulenter = gkd.getKonsulentList();
 
 	}
 	
@@ -30,19 +33,43 @@ public class KonsulentService {
 	}
 	
 	public Konsulent hentMedId(int id) {
+		for(Konsulent konsulent : konsulenter) {
+			if(konsulent.getId() == id) {
+				return konsulent;
+			}
+		}
+
 		return null;
 	}
 	
 	public int lagre(Konsulent konsulent){
-		return 0; 
+
+		konsulenter.add(konsulent);
+		return konsulenter.indexOf(konsulent);
 	}
 	
 	public int endre(Konsulent konsulent){
-		return 0; 
+		for(Konsulent k : konsulenter) {
+			if(k.getId() == konsulent.getId()) {
+				int p = konsulenter.indexOf(k);
+				konsulenter.set(p, konsulent);
+				return p;
+			}
+		}
+		return -1;
 	}
 	
 	public boolean slett(Konsulent konsulent){
+
+		for(Konsulent k : konsulenter) {
+			if(konsulent.getId() == konsulent.getId()) {
+				konsulenter.remove(k);
+				return true;
+			}
+		}
+
 		return false;
+
 	}
 	
 	

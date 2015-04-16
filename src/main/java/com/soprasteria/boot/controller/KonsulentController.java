@@ -24,7 +24,6 @@ public class KonsulentController {
 	@ResponseBody
 	public List<Konsulent> findAll() {
 		return service.hentAlleKonsulenter();
-		
 	}
 	
 	
