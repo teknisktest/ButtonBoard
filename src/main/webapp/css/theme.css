@@ -1,3 +1,16 @@
 .jumbotron {
     margin-top: 100px;
+    background-image: url('/img/whack.jpg');
+    background-size: 100%;
+    background-position: center;
+
+
+}
+
+
+.jumbotext {
+    background-color: #ffffff;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+    padding:10px;
 }
