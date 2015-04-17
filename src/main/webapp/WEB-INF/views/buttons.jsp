@@ -78,18 +78,17 @@
         <div class="panel-body">
           <button type="button" class="btn btn-large btn-primary" data-bind="click:btn2_hentKonsulenter">Hent en liste med konsulentnavn fra server og vis de fram</button>
 
-          <div data-bind="foreach:btn2_konsulenter">
-            <span data-bind="text: $data.navn"></span>
-          </div>
+          <h1 data-bind="if: btn2_konsulenter.length > 0">Konsulenter</h1>
+
+            <ul data-bind="foreach:btn2_konsulenter">
+              <li><span data-bind="text:navn"></span> - <span data-bind="text:stilling"></span> - <span data-bind="text:epost"></span></li>
+
+            </ul>
 
         </div>
       </div>
 
     </div>
-  </div>
-
-  <div class="row">
-
   </div>
 
 </div> <!-- /container -->
