@@ -78,7 +78,7 @@
         <div class="panel-body">
           <button type="button" class="btn btn-large btn-primary" data-bind="click:btn2_hentKonsulenter">Hent en liste med konsulentnavn fra server og vis de fram</button>
 
-          <h1 data-bind="if: btn2_konsulenter.length > 0">Konsulenter</h1>
+          <h3 data-bind="if: btn2_konsulenter().length > 0">Konsulenter</h3>
 
             <ul data-bind="foreach:btn2_konsulenter">
               <li><span data-bind="text:navn"></span> - <span data-bind="text:stilling"></span> - <span data-bind="text:epost"></span></li>

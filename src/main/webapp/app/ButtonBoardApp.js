@@ -18,7 +18,7 @@ var ButtonBoardViewModel = function() {
             contentType: 'application/json; charset=UTF-8',
             mimeType: 'application/json',
             success: function(data) {
-                $.each(data, function(konsulentJson){
+                $.each(data, function(id, konsulentJson){
                     self.btn2_konsulenter.push(new Konsulent(konsulentJson))
                 });
             },
@@ -30,4 +30,4 @@ var ButtonBoardViewModel = function() {
 
 };
 
-ko.applyBindings(new ButtonBoardViewModel());
+var VM = ko.applyBindings(new ButtonBoardViewModel());
