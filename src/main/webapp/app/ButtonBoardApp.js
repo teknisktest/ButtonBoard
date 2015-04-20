@@ -4,6 +4,7 @@ var ButtonBoardViewModel = function() {
     self.firstName = ko.observable();
     self.lastName = ko.observable();
     self.btn2_konsulenter = ko.observableArray();
+    self.btn3_response = ko.observable();
 
 
     self.sayHello = function(){
@@ -23,6 +24,21 @@ var ButtonBoardViewModel = function() {
                 });
             },
             error:function(data,status,er) {
+                //alert("En teknisk feil oppstod - kunne ikke hente n");
+            }
+        });
+    }
+
+    self.btn3_getText = function(){
+        $.ajax({
+            url: "/noetekst",
+            type: 'GET',
+            mimeType: 'text/plain',
+            success: function(data) {
+                self.btn3_response(data);
+            },
+            error:function(data,status,er) {
+                console.log(er);
                 //alert("En teknisk feil oppstod - kunne ikke hente n");
             }
         });

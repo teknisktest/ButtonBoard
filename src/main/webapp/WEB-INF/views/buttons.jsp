@@ -88,6 +88,16 @@
         </div>
       </div>
 
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <p>
+            <button type="button" class="btn btn-large btn-primary" data-bind="click:btn3_getText">Hent litt tekst fra server</button>
+          </p>
+          <p data-bind="text: btn3_response"></p>
+
+        </div>
+      </div>
+
     </div>
   </div>
 

@@ -39,5 +39,13 @@ public class ButtonBoardController {
         return IOUtils.toByteArray(is);
 
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/noetekst", method = RequestMethod.GET, produces = "text/plain;charset=ASCII") // Change to MediaType.IMAGE_JPEG_VALUE for image
+    public String noetekst(HttpServletResponse response){
+        response.setContentType("text/plain;charset=ASCII");
+        return "Hei på deg jeg heter Åge Amundsen og jeg er 19 år.";
+
+    }
 }
 

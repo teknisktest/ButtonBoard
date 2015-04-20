@@ -24,7 +24,5 @@ public class BootUp {
 			return "YEAH YEAH";
 		}
 	}
-		
-
 }
 
