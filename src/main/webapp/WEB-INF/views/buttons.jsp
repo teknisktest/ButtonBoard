@@ -98,6 +98,16 @@
         </div>
       </div>
 
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <p>
+          <form action="/image" target="_blank">
+            <input type="submit" class="btn btn-large btn-primary" value="Vis et bilde fra server (fors&oslash;k i Chrome og IE)">
+          </form>
+          </p>
+        </div>
+      </div>
+
     </div>
   </div>
 
