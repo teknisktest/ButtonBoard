@@ -3,6 +3,9 @@ package com.soprasteria.boot.util;
 import au.com.bytecode.opencsv.CSVReader;
 import com.soprasteria.boot.domain.Konsulent;
 import com.soprasteria.boot.domain.Stilling;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +13,13 @@ import java.util.List;
 /**
  * Created by olovholm on 16.04.2015.
  */
+
+
 public class GenerateKonsulentData {
+
+    public GenerateKonsulentData() {
+
+    }
 
 
 

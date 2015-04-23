@@ -16,13 +16,6 @@ public class BootUp {
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(BootUp.class, args);
 	}
-	
-	public static String tekniskTest(String input) {
-		if (input == "teknisk test") {
-			return "FUN FUN FUN";
-		} else {
-			return "YEAH YEAH";
-		}
-	}
+
 }
 

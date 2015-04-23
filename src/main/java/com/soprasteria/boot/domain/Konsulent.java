@@ -1,5 +1,9 @@
 package com.soprasteria.boot.domain;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Konsulent {
 	private String navn; 
 	private int id; 

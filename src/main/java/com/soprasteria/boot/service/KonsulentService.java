@@ -13,12 +13,13 @@ import com.soprasteria.boot.domain.Konsulent;
 //TODO: Implementer logikk for å arbeide mot konsulentlista
 
 @Service
-@Configurable
 public class KonsulentService {
 
 	
-	private List<Konsulent> konsulenter; 
-	
+	private List<Konsulent> konsulenter;
+
+
+
 	public KonsulentService() {
 
 		GenerateKonsulentData gkd = new GenerateKonsulentData();
