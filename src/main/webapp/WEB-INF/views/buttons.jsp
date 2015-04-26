@@ -108,6 +108,17 @@
         </div>
       </div>
 
+
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <p>
+            <button type="button" class="btn btn-large btn-primary" data-bind="click:btn5_getError">Hent data fra komplisert, utestet kode</button>
+          </p>
+          <p data-bind="text: btn5_response"></p>
+
+        </div>
+      </div>
+
     </div>
   </div>
 

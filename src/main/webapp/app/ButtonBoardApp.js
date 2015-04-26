@@ -5,6 +5,7 @@ var ButtonBoardViewModel = function() {
     self.lastName = ko.observable();
     self.btn2_konsulenter = ko.observableArray();
     self.btn3_response = ko.observable();
+    self.btn5_response = ko.observable();
 
 
     self.sayHello = function(){
@@ -36,6 +37,21 @@ var ButtonBoardViewModel = function() {
             mimeType: 'text/plain',
             success: function(data) {
                 self.btn3_response(data);
+            },
+            error:function(data,status,er) {
+                console.log(er);
+                //alert("En teknisk feil oppstod - kunne ikke hente n");
+            }
+        });
+    }
+
+    self.btn5_getError = function(){
+        $.ajax({
+            url:"/maketrouble",
+            type:'GET',
+            mimeType:'text/pain',
+            success: function(data) {
+                self.btn5_response(data);
             },
             error:function(data,status,er) {
                 console.log(er);
