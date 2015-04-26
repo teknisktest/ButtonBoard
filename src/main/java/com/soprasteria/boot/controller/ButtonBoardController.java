@@ -1,7 +1,9 @@
 package com.soprasteria.boot.controller;
 
+import com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
+import org.apache.coyote.ErrorState;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -17,6 +19,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.URL;
+import java.rmi.ServerError;
 
 
 @Controller
@@ -28,6 +31,14 @@ public class ButtonBoardController {
     public String displayButtons(){
 
         return "buttons";
+    }
+
+    @RequestMapping(value = "/maketrouble")
+    public String makeTrouble() {
+
+        // Komplisert kode. Så komplisert at vi kan like gjerne kaste en slik en:
+
+        throw new IllegalStateException();
     }
 
     @ResponseBody

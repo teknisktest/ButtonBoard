@@ -1,36 +1,45 @@
 package com.soprasteria.boot.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.soprasteria.boot.util.GenerateKonsulentData;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.stereotype.Service;
 
 import com.soprasteria.boot.domain.Konsulent;
 
+import javax.annotation.PostConstruct;
 
-//TODO: Implementer logikk for å arbeide mot konsulentlista
+
 
 @Service
 public class KonsulentService {
 
-	
+	@Autowired
+	GenerateKonsulentData generateKonsulentData;
+
 	private List<Konsulent> konsulenter;
 
 
 
 	public KonsulentService() {
+		this.konsulenter = new ArrayList<Konsulent>();
 
-		GenerateKonsulentData gkd = new GenerateKonsulentData();
-		konsulenter = gkd.getKonsulentList();
+	}
 
+	@PostConstruct
+	public void initData() {
+
+		this.konsulenter = generateKonsulentData.getKonsulentList();
 	}
 	
 
 	
 	public List<Konsulent> hentAlleKonsulenter() {
-		return konsulenter;
+		return this.konsulenter;
 	}
 	
 	public Konsulent hentMedId(int id) {
