@@ -85,6 +85,16 @@ public class KonsulentService {
 	public int antall(){
 		return konsulenter.size();
 	}
+
+	public int getNextId(){
+		int run = 0;
+		for(Konsulent k : konsulenter){
+			if (run<k.getId()){
+				run = k.getId() + 1;
+			}
+		}
+		return run;
+	}
 	
 	
 

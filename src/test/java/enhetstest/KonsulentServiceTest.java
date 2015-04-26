@@ -56,5 +56,12 @@ public class KonsulentServiceTest {
         Assert.assertEquals(konsulentService.slett(k),false);
     }
 
+    @Test
+    public void getNextIdReturnsHighestIdPlussOne() {
+        Konsulent k = new Konsulent(500);
+        konsulentService.lagre(k);
+        Assert.assertEquals(konsulentService.getNextId(),501);
+    }
+
 
 }
