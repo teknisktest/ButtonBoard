@@ -11,7 +11,12 @@ public class Konsulent {
 	private String image_url;
 	private int pris; 
 	private Stilling stilling;
-	
+
+	public Konsulent() {}
+
+	public Konsulent(int id) {
+		this.id = id;
+	}
 	
 	
 	

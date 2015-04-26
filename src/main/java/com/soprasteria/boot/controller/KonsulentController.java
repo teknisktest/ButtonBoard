@@ -31,7 +31,7 @@ public class KonsulentController {
 	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
 	public List<Konsulent> findAll() {
-		return service.hentAlleKonsulenter();
+		return service.hentAlle();
 	}
 
 

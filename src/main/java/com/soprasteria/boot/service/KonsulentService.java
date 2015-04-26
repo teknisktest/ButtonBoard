@@ -38,7 +38,7 @@ public class KonsulentService {
 	
 
 	
-	public List<Konsulent> hentAlleKonsulenter() {
+	public List<Konsulent> hentAlle() {
 		return this.konsulenter;
 	}
 	
@@ -57,7 +57,7 @@ public class KonsulentService {
 		konsulenter.add(konsulent);
 		return konsulenter.indexOf(konsulent);
 	}
-	
+
 	public int endre(Konsulent konsulent){
 		for(Konsulent k : konsulenter) {
 			if(k.getId() == konsulent.getId()) {
@@ -80,6 +80,10 @@ public class KonsulentService {
 
 		return false;
 
+	}
+
+	public int antall(){
+		return konsulenter.size();
 	}
 	
 	
