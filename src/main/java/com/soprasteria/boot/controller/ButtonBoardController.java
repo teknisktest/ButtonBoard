@@ -58,5 +58,18 @@ public class ButtonBoardController {
         return "Hei på deg jeg heter Åge Amundsen og jeg er 19 år.";
 
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/crapComputing", method = RequestMethod.GET) // Change to MediaType.IMAGE_JPEG_VALUE for image
+    public double crapComputing() {
+        double randNumber = Math.random();
+        double d = randNumber * 10000000;
+        double sum = 1.0;
+        for (double i = 1; i < d; i++){
+            sum = sum +  Math.sin(i) * Math.cos(i);
+        }
+
+        return sum;
+    }
 }
 

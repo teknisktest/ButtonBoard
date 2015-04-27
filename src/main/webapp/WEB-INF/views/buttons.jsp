@@ -129,6 +129,16 @@
         </div>
       </div>
 
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <p>
+            <button type="button" class="btn btn-large btn-primary" data-bind="click:btn7_computeAnotherNumber">Regn ut et tall</button>
+          </p>
+          <p data-bind="text: btn7_crapComputing"></p>
+
+        </div>
+      </div>
+
     </div>
   </div>
 

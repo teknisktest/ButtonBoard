@@ -7,6 +7,7 @@ var ButtonBoardViewModel = function() {
     self.btn3_response = ko.observable();
     self.btn5_response = ko.observable();
     self.btn6_crapComputing = ko.observable(1);
+    self.btn7_crapComputing = ko.observable();
 
 
     self.sayHello = function(){
@@ -66,6 +67,24 @@ var ButtonBoardViewModel = function() {
         for (i = 0; i < 100000; i++) {
             self.btn6_crapComputing(self.btn6_crapComputing() + i);
         }
+    }
+
+
+    self.btn7_computeAnotherNumber = function(){
+
+
+        $.ajax({
+            url:"/crapComputing",
+            type:'GET',
+            mimeType:'text/pain',
+            success: function(data) {
+                self.btn7_crapComputing(data);
+            },
+            error:function(data,status,er) {
+                console.log(er);
+
+            }
+        });
     }
 
 };
