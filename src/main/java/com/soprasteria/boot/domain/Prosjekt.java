@@ -7,7 +7,7 @@ import java.util.List;
 
 @Component
 public class Prosjekt {
-	private int id; 
+	private int id;
 	private List<Konsulent> konsulenter;
 	private String navn;
 
