@@ -119,6 +119,16 @@
         </div>
       </div>
 
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <p>
+            <button type="button" class="btn btn-large btn-primary" data-bind="click:btn6_computeANumber">Legg til en mengde til tallet under.</button>
+          </p>
+          <p data-bind="text: btn6_crapComputing"></p>
+
+        </div>
+      </div>
+
     </div>
   </div>
 
