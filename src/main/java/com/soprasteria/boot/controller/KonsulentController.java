@@ -71,13 +71,16 @@ public class KonsulentController {
 				Stilling s = StillingService.stringTilStilling(stilling);
 				if(s != null) {
 					k.setStilling(s);
+				} else {
+					logger.info("Kunne ikke lagre stilling: " + stilling);
+					return new ResponseEntity("Stilling ugyldig", responseHeaders, HttpStatus.BAD_REQUEST);
 				}
 			}
 			konsulentService.lagre(k);
 
 		} catch(Exception e) {
-			System.out.println(e);
-			return new ResponseEntity("Konsulent lagret",responseHeaders, HttpStatus.BAD_REQUEST);
+			logger.error(e.getMessage());
+			return new ResponseEntity("Kunne ikke lagre konsulent",responseHeaders, HttpStatus.BAD_REQUEST);
 		}
 
 		return new ResponseEntity("Konsulent lagret",responseHeaders, HttpStatus.CREATED);
