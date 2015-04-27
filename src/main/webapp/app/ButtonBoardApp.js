@@ -6,6 +6,7 @@ var ButtonBoardViewModel = function() {
     self.btn2_konsulenter = ko.observableArray();
     self.btn3_response = ko.observable();
     self.btn5_response = ko.observable();
+    self.btn6_crapComputing = ko.observable(1);
 
 
     self.sayHello = function(){
@@ -40,7 +41,6 @@ var ButtonBoardViewModel = function() {
             },
             error:function(data,status,er) {
                 console.log(er);
-                //alert("En teknisk feil oppstod - kunne ikke hente n");
             }
         });
     }
@@ -55,9 +55,17 @@ var ButtonBoardViewModel = function() {
             },
             error:function(data,status,er) {
                 console.log(er);
-                //alert("En teknisk feil oppstod - kunne ikke hente n");
+
             }
         });
+    }
+
+
+    self.btn6_computeANumber = function(){
+
+        for (i = 0; i < 100000; i++) {
+            self.btn6_crapComputing(self.btn6_crapComputing() + i);
+        }
     }
 
 };
