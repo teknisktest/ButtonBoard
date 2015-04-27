@@ -8,6 +8,9 @@ import com.soprasteria.boot.domain.Konsulent;
 import com.soprasteria.boot.domain.Stilling;
 import com.soprasteria.boot.service.StillingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -49,11 +52,15 @@ public class KonsulentController {
 
 	@RequestMapping(method = RequestMethod.POST)
 	@ResponseBody
-	public String createKonsulent(HttpServletRequest request,
+	public ResponseEntity createKonsulent(HttpServletRequest request,
 								  @RequestParam(value = "navn", required = true) String name,
 								  @RequestParam(value = "epost", required = true)String epost,
 								  @RequestParam(value = "pris", required = true) String pris,
 								  @RequestParam(value = "stilling", required = false) String stilling) {
+
+		HttpHeaders responseHeaders = new HttpHeaders();
+
+
 		logger.info("Values of navn, epost, pris " + name + "," + epost + "," + pris );
 		try {
 			Konsulent k = new Konsulent(konsulentService.getNextId());
@@ -70,10 +77,10 @@ public class KonsulentController {
 
 		} catch(Exception e) {
 			System.out.println(e);
-			return "kunne ikke lagre konsulent";
+			return new ResponseEntity("Konsulent lagret",responseHeaders, HttpStatus.BAD_REQUEST);
 		}
 
-		return "lagret konsulent";
+		return new ResponseEntity("Konsulent lagret",responseHeaders, HttpStatus.CREATED);
 
 	}
 
