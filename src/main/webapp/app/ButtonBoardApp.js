@@ -8,6 +8,7 @@ var ButtonBoardViewModel = function() {
     self.btn5_response = ko.observable();
     self.btn6_crapComputing = ko.observable(1);
     self.btn7_crapComputing = ko.observable();
+    self.btn8_olaQuote = ko.observableArray();
 
 
     self.sayHello = function(){
@@ -86,6 +87,12 @@ var ButtonBoardViewModel = function() {
             }
         });
     }
+
+    self.btn8_getOlaQuote = function() {
+       self.btn8_olaQuote.push("Let's git real!");
+       self.btn8_olaQuote.push("Emilie: Ola jeg har 24 problemer?!? Ola: Er det ikke 99?!");
+       self.btn8_olaQuote.push("");
+        }
 
 };
 
