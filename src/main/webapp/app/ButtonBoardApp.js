@@ -91,7 +91,7 @@ var ButtonBoardViewModel = function() {
     self.btn8_getOlaQuote = function() {
        self.btn8_olaQuote.push("Let's git real!");
        self.btn8_olaQuote.push("Emilie: Ola jeg har 24 problemer?!? Ola: Er det ikke 99?!");
-       self.btn8_olaQuote.push("Jeg er skikkelig 1337!");
+       self.btn8_olaQuote.push("Er du? MONSTERET!");
         }
 
 };
