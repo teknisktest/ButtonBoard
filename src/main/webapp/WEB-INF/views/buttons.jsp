@@ -139,17 +139,6 @@
         </div>
       </div>
 
-      <div class="panel panel-default">
-              <div class="panel-body">
-                <p>
-                  <button type="button" class="btn btn-large btn-primary" data-bind="click:btn8_getOlaQuote">Trykk her for en Ola quote</button>
-                </p>
-                <ul data-bind="foreach: btn8_olaQuote">
-                <li data-bind="text: $data"></li>
-                </ul>
-              </div>
-            </div>
-
     </div>
   </div>
 
